@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+// Iterative function to calculate factorial
+unsigned long long factorialIterative(int n) {
+    unsigned long long fact = 1;
+    for (int i = 1; i <= n; ++i) {
+        fact *= i;
+    }
+    return fact;
+}
+
+// Recursive function to calculate factorial
+unsigned long long factorialRecursive(int n) {
+    if (n <= 1) {
+        return 1;
+    } else {
+        return n * factorialRecursive(n - 1);
+    }
+}
+
+int main() {
+    int num;
+    cout << "Enter a positive integer: ";
+    cin >> num;
+
+    if (num < 0) {
+        cout << "Factorial is not defined for negative numbers." << endl;
+    } else {
+        cout << "Factorial of " << num << " (Iterative): " << factorialIterative(num) << endl;
+        cout << "Factorial of " << num << " (Recursive): " << factorialRecursive(num) << endl;
+    }
+
+    return 0;
+}

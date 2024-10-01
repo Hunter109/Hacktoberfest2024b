@@ -1,0 +1,17 @@
+// Function to calculate the sum of three natural numbers
+function sumOfThreeNumbers(a, b, c) {
+    // Ensure the numbers are natural (positive integers)
+    if (a > 0 && b > 0 && c > 0) {
+        return a + b + c;
+    } else {
+        return 'All numbers should be natural (positive integers)';
+    }
+}
+
+// Example usage
+const num1 = 5;
+const num2 = 10;
+const num3 = 15;
+
+const sum = sumOfThreeNumbers(num1, num2, num3);
+console.log(`The sum of ${num1}, ${num2}, and ${num3} is: ${sum}`);
